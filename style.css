@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*================== variaveis de imagens ================================== */
+:root {
+  
+  --color-yellow: #f69c3b;
+  --font--color-link:#f69c3b;
+   --body--gradient :linear-gradient(0deg,#040511,#141936);
+  --bg--gradient: linear-gradient(180deg, #55d5fd, #0342a7);
+  --bg-hover-gradient: linear-gradient(0deg, #55d5fd, #0342a7);
+  --font--color:white;
+}
+body{
+
+     background:var(--body--gradient); 
+}
+.login-container {
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(/user-authentication-system/images/capa-fundos.png);
+  background-repeat: repeat-x;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  animation-name:capafundos ;
+  animation-duration: 100s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+    padding: 30px;
+
+}
+.login-container p {
+  color: white;
+  margin-top: 20px;
+  font-size: 20px;
+}
+.login-container > a {
+  color: var(--font--color-link);
+  margin-top: 20px;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+   text-decoration: none;
+   background-color: #141936;
+   padding: 10px;
+   border-radius: 30px;
+   margin-bottom: 2px;
+}
+.input-group  input[type]:hover{
+  background-color: #040511;
+  transition: 1s;
+}
+
+
+
+
+.input-group {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-content: center;
+  align-items: center;
+  
+
+}
+.input-group a{
+  margin-bottom: none;
+  margin-top: -50px;
+  text-align: right;
+  color: var(--font--color-link);
+  text-decoration: none;
+  margin-right: 10px;
+ 
+}
+
+.logo {
+  margin-top: -50px;
+  width: 25%;
+}
+
+#username {
+  background-image: url("./icons/person.svg");
+  background-repeat: no-repeat;
+  padding: 10px;
+  background-size: 25px;
+  background-position: calc(6px + 2px);
+  text-align: center;
+  background-repeat: no-repeat;
+  padding: 10px;
+ 
+}
+
+#password {
+  background-image: url("./icons/lock.svg");
+  
+  background-position: calc(6px + 2px);
+  text-align: center;
+  background-repeat: no-repeat;
+  padding: 10px;
+}
+
+.input-group input[type] {
+  outline: none;
+  border: none;
+  margin-bottom: 50px;
+  width: 350px;
+  border-radius: 20px;
+  text-align: center;
+  padding: 113px;
+  background-color: RGB(43, 64, 103);
+  caret-color: var(--color-yellow);
+  color:var(--font--color);
+  font-size: 16px;
+}
+
+#username::placeholder {
+  color: rgb(243, 240, 240);
+}
+
+#password::placeholder {
+  color: white;
+}
+
+.btn-continue {
+  cursor: pointer;
+  font-size: 15px;
+  color: var(--font--color);
+  border: none;
+  width: 350px;
+  height: 35px;
+  padding: 5px;
+  border-radius: 30px;
+  background: var(--bg--gradient);
+  text-shadow:  1px   1px 1px rgb(116, 101, 43);
+}
+
+.btn-continue:hover {
+  background: var(--bg-hover-gradient);
+}
+
+/*============== logo =================================================== */
+@keyframes capafundos {
+     
+ 0% {
+      background-position: 0 0;  
+    }
+ 
+    100% {
+      background-position: 0 50%;
+    }
+}

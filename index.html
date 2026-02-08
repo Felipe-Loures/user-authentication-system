@@ -3,27 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Login</title>
   </head>
 
   <body>
     <div class="login-container">
-      <h2>Login</h2>
-
+      <img
+        class="logo"
+        src="/user-authentication-system/images/logo.png"
+        alt=""
+        srcset=""
+      />
       <form id="login-form">
         <div class="input-group">
+          <label for="username"></label>
           <input
             type="text"
             id="username"
             name="username"
-            placeholder="Digite seu nome..."
+            placeholder="Username"
           />
-          <label for="username">Nome de usuário</label>
+          <label for="password"></label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Password"
+          />
+          <a href="#">Forgot password?</a>
         </div>
 
-        <button type="submit" class="btn-continue">Continuar</button>
+        <button type="submit" class="btn-continue">Log In</button>
       </form>
+      <p>or</p>
+      <a href="#"
+        ><img width="20px" src="/user-authentication-system/icons/adicionar.png" alt="" />Create account ?</a>
     </div>
+
+    <!-- ========================= jscript ====================================== -->
     <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
     <script src="script.js"></script>
   </body>

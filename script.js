@@ -4,9 +4,12 @@ const validator = new window.JustValidate('#login-form');
 validator
   .addField('#username', [
     {
+
       rule: 'required',
       errorMessage: 'O nome é obrigatório',
+
     },
+    
     {
       rule: 'minLength',
       value: 3,
