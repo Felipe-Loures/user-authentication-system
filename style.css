@@ -6,35 +6,29 @@
 
 /*================== variaveis de imagens ================================== */
 :root {
-  
   --color-yellow: #f69c3b;
-  --font--color-link:#f69c3b;
-   --body--gradient :linear-gradient(0deg,#040511,#141936);
+  --font--color-link: #f69c3b;
+  --body--gradient: linear-gradient(0deg, #040511, #141936);
   --bg--gradient: linear-gradient(180deg, #55d5fd, #0342a7);
   --bg-hover-gradient: linear-gradient(0deg, #55d5fd, #0342a7);
-  --font--color:white;
+  --font--color: white;
 }
-body{
-
-     background:var(--body--gradient); 
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  margin-top: 0;
 }
 .login-container {
   width: 100%;
-  height: 100dvh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 109dvh;
+  margin-top: -43px;
   background-image: url(/user-authentication-system/images/capa-fundos.png);
-  background-repeat: repeat-x;
   background-size: cover;
+  background-position: center center;
   display: flex;
   flex-direction: column;
-  animation-name:capafundos ;
-  animation-duration: 100s;
-  animation-direction: alternate;
-  animation-iteration-count: infinite;
-    padding: 30px;
-
+  align-items: center;
+  justify-content: center;
 }
 .login-container p {
   color: white;
@@ -49,40 +43,43 @@ body{
   align-items: center;
   justify-content: center;
   gap: 5px;
-   text-decoration: none;
-   background-color: #141936;
-   padding: 10px;
-   border-radius: 30px;
-   margin-bottom: 2px;
+  text-decoration: none;
+  background-color: #141936;
+  padding: 10px;
+  border-radius: 30px;
+  margin-bottom: 2px;
 }
-.input-group  input[type]:hover{
+#login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+
+  margin-top: 0;
+}
+.input-group input[type]:hover {
   background-color: #040511;
   transition: 1s;
 }
-
-
-
 
 .input-group {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   justify-content: center;
   align-items: center;
-  
-
 }
-.input-group a{
+.input-group a {
   margin-bottom: none;
   margin-top: -50px;
   text-align: right;
   color: var(--font--color-link);
   text-decoration: none;
   margin-right: 10px;
- 
 }
 
 .logo {
-  margin-top: -50px;
+  margin-top: -20px;
   width: 25%;
 }
 
@@ -94,13 +91,10 @@ body{
   background-position: calc(6px + 2px);
   text-align: center;
   background-repeat: no-repeat;
-  padding: 10px;
- 
 }
 
 #password {
   background-image: url("./icons/lock.svg");
-  
   background-position: calc(6px + 2px);
   text-align: center;
   background-repeat: no-repeat;
@@ -117,7 +111,7 @@ body{
   padding: 113px;
   background-color: RGB(43, 64, 103);
   caret-color: var(--color-yellow);
-  color:var(--font--color);
+  color: var(--font--color);
   font-size: 16px;
 }
 
@@ -139,21 +133,100 @@ body{
   padding: 5px;
   border-radius: 30px;
   background: var(--bg--gradient);
-  text-shadow:  1px   1px 1px rgb(116, 101, 43);
+  text-shadow: 1px 1px 1px rgb(116, 101, 43);
 }
 
 .btn-continue:hover {
   background: var(--bg-hover-gradient);
 }
 
-/*============== logo =================================================== */
+/* ==================== button voltar ===============================================*/
+.voltar {
+  display: none;
+}
+/* onsucesso estiliZcao */
+
+/*=========================== logo =================================================== */
+
 @keyframes capafundos {
-     
- 0% {
-      background-position: 0 0;  
-    }
- 
-    100% {
-      background-position: 0 50%;
-    }
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+/* ======================animacao sucesso ======================================= */
+
+@keyframes sucess {
+}
+.just-validate-error-label.btnVoltar {
+  background-color: red;
+}
+.just-validate-error-label {
+  text-align: center;
+
+  font-size: 30px;
+  border-radius: 30px;
+}
+.input-error {
+  display: none;
+}
+
+.input-group.has-error {
+  width: 540px;
+  height: 350px;
+  padding: 30px;
+  border-radius: 20px;
+  background: var(--body--gradient);
+  text-shadow: 1px 1px 0px rgb(229, 224, 224);
+  box-shadow: 1px 4px 91px rgb(167, 16, 16);
+}
+.voltar.error-voltar {
+  display: block;
+  width: 100px;
+  background-color: red;
+  border: none;
+  position: relative;
+  box-shadow: 1px 2px 9px rgb(7, 7, 7);
+  padding: 2px;
+  font-size: 16px;
+  bottom: 30px;
+  right: 199px;
+  border-radius: 30px;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+}
+.voltar.error-voltar:hover {
+  background-color: #070d4d;
+  box-shadow: 1px 1px 10px rgb(167, 16, 16);
+  color: red;
+}
+
+.btn-continue.btn-error,
+#forgot.delete-forgot,
+.logo.esconder-logo {
+  display: none;
+}
+
+.ou.ou-error,
+#create.no-create-account {
+  display: none;
+}
+
+/* susss */
+.just-validate-success-field {
+  display: none;
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: translatex(0 0);
+  }
+  100% {
+    transform: translateX(0 100%);
+  }
 }
