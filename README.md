@@ -67,8 +67,8 @@ Aplicar conceitos avançados de manipulação de eventos em JavaScript, integra�
   cd user-authentication-system
 ```
 ## Inicialização
->>  Execução: Como o projeto utiliza caminhos relativos e bibliotecas via CDN, basta abrir o arquivo index.html em seu navegador.
->>  Dica: Utilize a extensão Live Server no VS Code para visualizar as transições e animações em tempo real.
+- Execução: Como o projeto utiliza caminhos relativos e bibliotecas via CDN, basta abrir o arquivo index.html em seu navegador.
+- Dica: Utilize a extensão Live Server no VS Code para visualizar as transições e animações em tempo real.
 
 ## ✔ Conclusão
 - Este sistema representa a união entre design centrado no usuário e engenharia de software moderna. O diferencial deste projeto reside na integração profunda com a biblioteca   JustValidate.js, que atua como a inteligência por trás da interface:
