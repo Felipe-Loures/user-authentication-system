@@ -1,61 +1,48 @@
 <!doctype html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Login</title>
-  </head>
 
-  <body>
-    <div class="login-container">
-      <img
-        class="logo"
-        src="/user-authentication-system/images/logo.png"
-        alt=""
-        srcset=""
-      />
-     
-      <form id="login-form" action="">
-        
-        <div class="input-group" >
-          <input
-            type="text"
-            id="username"
-            name="username"
-            placeholder="Username"
-          />
-        
-          <input
-            type="password"
-            name="password"
-            id="password"
-            placeholder="Password"
-          />
-          
-          <a id="forgot" href="#">Forgot password?</a>
-           
-        </div>
-        <a href="/user-authentication-system/" class="voltar">Voltar</a> 
-       
-        
-        <button type="submit" class="btn-continue">Log In</button>
-        
-      </form>
-      <p class="ou">Or</p>
-      <a id="create" href="#"
-        ><img
-          width="20px"
-          src="/user-authentication-system/icons/adicionar.png"
-          alt=""
-        />Create account ?</a
-      >
-    </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Login</title>
+</head>
 
-    </div>
+<body>
+  <div class="login-container">
+    <img class="logo" src="./images/logo.png" alt="" />
+
+    <form id="login-form" action="">
+
+      <div class="input-group">
+        <input type="text" id="username" name="username" placeholder="Username" />
+
+        <input type="password" name="password" id="password" placeholder="Password" />
+
+        <a id="forgot" href="#">Forgot password?</a>
+
+      </div>
+      <a href="index.html" class="voltar">Voltar</a>
+
+
+      <button type="submit" class="btn-continue">Log In</button>
+
+    </form>
+    <p class="ou">Or</p>
+    <a id="create" href="#">
+    Create account ?
+    <img width="20px" src="./icons/adicionar.png" 
+     alt="Icons " />
+    </a>
+
   </div>
-    <!-- ========================= jscript ====================================== -->
-    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
-    <script src="/user-authentication-system/script.js"></script>
-  </body>
+</div>
+</div>
+ 
+  <!-- CDN JUST-VALIDATE-->
+  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+
+  <script src="script.js"></script>
+</body>
+
 </html>
