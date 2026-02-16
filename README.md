@@ -4,7 +4,7 @@
 Desenvolvimento de um sistema de autenticação dinâmico, utilizando HTML5, CSS3 e JavaScript. O projeto foca em uma interface de usuário (UI) imersiva, com validações robustas em tempo real e estados visuais que se transformam de acordo com as interações do usuário.
 
 ## 🖥️ Descrição do Projeto
-O User Authentication System é um módulo de login que prioriza o feedback visual. Utilizando a biblioteca JustValidate, o sistema valida credenciais antes do envio e manipula o DOM para reorganizar o layout em caso de erro, proporcionando uma experiência de usuário (UX) clara e intuitiva.
+O User Authentication System é um módulo de login que prioriza o feedback visual. Utilizando a biblioteca **JustValidate**, o sistema valida credenciais antes do envio e manipula o DOM para reorganizar o layout em caso de erro, proporcionando uma experiência de usuário (UX) clara e intuitiva.
 
 ## 🎯 Objetivo
 Aplicar conceitos avançados de manipulação de eventos em JavaScript, integração de bibliotecas externas e estilização condicional para criar um fluxo de login seguro e visualmente atraente.
