@@ -14,6 +14,8 @@ Aplicar conceitos avançados de manipulação de eventos em JavaScript, integra�
 
 - Transformação de Layout: Em caso de erro, a interface oculta elementos secundários (logo, links) e destaca o formulário com efeitos neon.
 
+- Modal de Erro: Quando a validação falha, um modal aparece centralizado, exibindo a mensagem de erro de forma clara e chamativa, reforçando o feedback visual para o usuário.
+
 - Navegação Inteligente: Exibição condicional do botão "Voltar" apenas quando ocorre uma falha na validação.
 
 - Interatividade: Inputs personalizados com ícones dinâmicos e feedbacks de foco/hover.
