@@ -81,6 +81,12 @@ Aplicar conceitos avançados de manipulação de eventos em JavaScript, integra�
 - Experiência Premium: A capacidade da biblioteca de validar dados sem recarregar a página (AJAX-ready) eleva o padrão de usabilidade, transformando uma tarefa simples de login em uma jornada interativa e profissional.
 
 - Este projeto é uma demonstração prática de como a manipulação de classes CSS via JavaScript, orquestrada por uma biblioteca de validação robusta, pode criar fluxos de navegação resilientes e esteticamente impecáveis.
+
+## 📸 Preview do Projeto
+
+<p align="center">
+  <img src="./images/screenshot-login.jpg" alt="Preview do Sistema" width="700"/>
+</p>
   
 ## 📜 Licença 
 Este projeto está sob a licença MIT.
