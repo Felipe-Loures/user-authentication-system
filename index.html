@@ -1,47 +1,47 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./styles/style.css"/>
-  <title>Login</title>
+  <link rel="stylesheet" href="./styles/style.css" />
+  <title>Login | Secure Terminal</title>
 </head>
 
 <body>
   <div class="login-container">
-    <img class="logo" src="./images/logo.png" alt="" />
 
     <form id="login-form" action="">
+      <h2 class="terminal-title">ACCESS TERMINAL</h2>
 
       <div class="input-group">
-        <input type="text" id="username" name="username" placeholder="Username" />
+        <div class="input-wrapper">
+          <img src="./icons/person.svg" class="input-icon" alt="">
+          <input type="text" id="username" name="username" placeholder="Nome completo..." autocomplete="off" />
+        </div>
 
-        <input type="password" name="password" id="password" placeholder="Password" />
+        <div class="input-wrapper">
+          <img src="./icons/lock.svg" class="input-icon" alt="">
+          <input type="password" id="password" name="password" placeholder="Senha..." />
+        </div>
 
-        <a id="forgot" href="#">Forgot password?</a>
-
+        <a id="forgot" href="#">Esqueceu a senha?</a>
       </div>
+
+      <button type="submit" class="btn-continue">Entrar</button>
+
       <a href="index.html" class="voltar">Voltar</a>
-
-
-      <button type="submit" class="btn-continue">Log In</button>
-
     </form>
-    <p class="ou">Or</p>
+
+    <p class="ou">Ou</p>
+
     <a id="create" href="#">
-    Create account ?
-    <img width="20px" src="./icons/adicionar.png" 
-     alt="Icons " />
+      Criar uma conta?
+      <img width="20px" src="./icons/adicionar.png" alt="Icons" />
     </a>
 
   </div>
-</div>
-</div>
- 
-  <!-- CDN JUST-VALIDATE-->
-  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
 
+  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
   <script src="./scripts/script.js"></script>
 </body>
 
