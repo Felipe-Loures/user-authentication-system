@@ -1,60 +1,75 @@
-const loginForm = document.querySelector("#login-form");
-const submitBtn = document.querySelector(".btn-continue");
-const originalText = "Entrar"; // Texto original do botão
+/**
+ * PROTOCOLO DE REGISTRO - TERMINAL
+ * Lógica de validação e feedback visual
+ */
 
-const validator = new window.JustValidate("#login-form", {
-  errorLabelCssClass: "error-text",
-  errorFieldCssClass: "input-error",
+// 1. SELETORES E CONFIGURAÇÕES INICIAIS
+const registerForm = document.querySelector("#register-form");
+const submitBtn    = document.querySelector(".btn-terminal");
+const originalText = "INICIAR REGISTRO";
+
+const validator = new window.JustValidate("#register-form", {
+    errorLabelCssClass: "error-text",
+    errorFieldCssClass: "input-error",
 });
 
+// 2. DEFINIÇÃO DE REGRAS DE VALIDAÇÃO
 validator
-  .addField("#username", [
-    {
-      rule: "required",
-      errorMessage: "O nome de usuário é obrigatório"
-    },
-    {
-      rule: "minLength",
-      value: 3,
-      errorMessage: "O usuário deve ter pelo menos 3 caracteres"
-    },
-  ])
-  .addField("#password", [
-    {
-      rule: "required",
-      errorMessage: "A senha é obrigatória"
-    },
-    {
-      rule: "minLength",
-      value: 4,
-      errorMessage: "A senha precisa de pelo menos 4 dígitos"
-    },
-  ])
-  .onFail(() => {
-    loginForm.classList.add("shake-error");
-    setTimeout(() => loginForm.classList.remove("shake-error"), 500);
+    .addField("#fullname", [
+        { rule: "required",  errorMessage: "A biometria (nome) é obrigatória" },
+        { rule: "minLength", value: 3, errorMessage: "Mínimo de 3 caracteres" },
+    ])
+    .addField("#email", [
+        { rule: "required",  errorMessage: "O SISTEMA_ID (E-mail) é obrigatório" },
+        { rule: "email",     errorMessage: "Protocolo de e-mail inválido" },
+    ])
+    .addField("#password", [
+        { rule: "required",  errorMessage: "A chave de encriptação é obrigatória" },
+        { rule: "minLength", value: 4, errorMessage: "Mínimo de 4 dígitos" },
+    ])
+    .addField("#confirm-password", [
+        { rule: "required",  errorMessage: "Confirme sua chave de acesso" },
+        {
+            validator: (value, fields) => {
+                const passwordValue = fields["#password"].elem.value;
+                return value === passwordValue;
+            },
+            errorMessage: "As chaves não coincidem",
+        },
+    ]);
 
-    submitBtn.innerHTML = originalText;
-    submitBtn.disabled = false;
-    submitBtn.style.background = "transparent";
-    submitBtn.style.color = "var(--neon-blue)";
-  })
-  .onSuccess((event) => {
-    // Feedback visual de "Autenticando"
+// 3. CALLBACK DE FALHA (ACESSO NEGADO)
+validator.onFail(() => {
+    // Efeito de vibração (Shake) no formulário
+    registerForm.classList.add("shake-error");
+    setTimeout(() => registerForm.classList.remove("shake-error"), 500);
+
+    // Feedback visual temporário no botão
+    submitBtn.innerHTML = "FALHA NO PROTOCOLO";
+    submitBtn.style.color = "var(--neon-red)";
+
+    setTimeout(() => {
+        submitBtn.innerHTML = originalText;
+        submitBtn.style.color = "var(--neon-blue)";
+    }, 2000);
+});
+
+// 4. CALLBACK DE SUCESSO (ACESSO CONCEDIDO)
+validator.onSuccess((event) => {
+    // Estado de processamento
     submitBtn.disabled = true;
-    submitBtn.innerHTML = "AUTENTICANDO...";
+    submitBtn.innerHTML = `<i class="fa-solid fa-sync fa-spin"></i> SINCRONIZANDO...`;
     submitBtn.style.background = "var(--neon-blue)";
     submitBtn.style.color = "#000";
 
+    // Simulação de handshake com o servidor
     setTimeout(() => {
-      event.target.submit();
+        submitBtn.innerHTML = "ACESSO CONCEDIDO";
+        submitBtn.style.background = "var(--neon-orange)";
+        submitBtn.style.boxShadow = "0 0 20px var(--neon-orange)";
 
-      setTimeout(() => {
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = originalText;
-        submitBtn.style.background = "transparent";
-        submitBtn.style.color = "var(--neon-blue)";
-      }, 3000);
-
-    }, 1200);
-  });
+        setTimeout(() => {
+            window.location.href = "login.html";
+        }, 1500);
+    }, 2000);
+});

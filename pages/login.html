@@ -1,42 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../styles/style.css" />
-  <title>Login | Secure Terminal</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terminal | Autenticação</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../styles/login.css">
 </head>
 
 <body>
-  <div class="login-container">
+  <div class="terminal-container">
 
-    <form id="login-form" action="">
+    <form class="terminal-form" id="login-form">
       <h2 class="terminal-title">ACCESS TERMINAL</h2>
 
       <div class="input-group">
         <div class="input-wrapper">
-          <img src="../icons/person.svg" class="input-icon" alt="">
-          <input type="text" id="username" name="username" placeholder="Nome completo..." autocomplete="off" />
+          <i class="fa-solid fa-at input-icon"></i>
+          <input type="email" id="email" placeholder="TERMINAL_ID (E-MAIL)..." required autocomplete="email">
         </div>
 
         <div class="input-wrapper">
-          <img src="../icons/lock.svg" class="input-icon" alt="">
-          <input type="password" id="password" name="password" placeholder="Senha..." />
+          <i class="fa-solid fa-key input-icon"></i>
+          <input type="password" id="password" placeholder="ACCESS_KEY (SENHA)..." required>
         </div>
 
-        <a id="forgot" href="#">Esqueceu a senha?</a>
+        <a href="#" class="helper-link">ESQUECEU A CHAVE DE ACESSO?</a>
       </div>
 
-      <button type="submit" class="btn-continue">Entrar</button>
-
-      <a href="index.html" class="voltar">Voltar</a>
+      <button type="submit" class="btn-terminal">AUTENTICAR</button>
     </form>
 
-    <p class="ou">Ou</p>
+    <p class="divider">NÃO POSSUI PROTOCOLO?</p>
 
-    <a id="create" href="../pages/register.html">
-      Criar uma conta?
-      <img width="20px" src="../icons/adicionar.png" alt="Icons" />
+    <a href="register.html" class="secondary-action">
+      <i class="fa-solid fa-user-plus"></i> SOLICITAR NOVO REGISTRO
     </a>
 
   </div>
