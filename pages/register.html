@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../styles/style.css" />
+  <title>Terminal | Cadastro</title>
+</head>
+
+<body>
+  <div class="login-container">
+
+    <form id="login-form" action="">
+      <h2 class="terminal-title">NEW ACCESS PROTOCOL</h2>
+
+      <div class="input-group">
+        <div class="input-wrapper">
+          <img src="../icons/person.svg" class="input-icon" alt="">
+          <input type="text" id="fullname" placeholder="NOME COMPLETO..." autocomplete="off" />
+        </div>
+
+        <div class="input-wrapper">
+          <img src="../icons/lock.svg" class="input-icon" alt="">
+          <input type="password" id="password" placeholder="SENHA..." />
+        </div>
+
+        <div class="input-wrapper">
+          <img src="../icons/lock.svg" class="input-icon" alt="">
+          <input type="password" id="confirm-password" placeholder="CONFIRMAR SENHA..." />
+        </div>
+      </div>
+
+      <button type="submit" class="btn-continue">REGISTRAR NO TERMINAL</button>
+      
+      <a href="login.html" id="forgot" style="text-align: center; margin: 15px 0; display: block;">JÁ POSSUO ACESSO</a>
+    </form>
+
+    <p class="ou">Ou</p>
+
+    <a id="create" href="../pages/login.html">
+      CANCELAR OPERAÇÃO
+    </a>
+
+  </div>
+
+  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+  <script src="../scripts/registerValidation.js"></script>
+</body>
+</html>
